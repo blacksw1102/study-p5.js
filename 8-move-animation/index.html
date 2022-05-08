@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(220);
+
+        x = 0;
+        y = 0;
+      }
+
+      function draw() {
+        background(220);
+        x = x + 3;
+        y = y + 5;
+        rect(x, y, 50);
+      }
+    </script>
+  </body>
+</html>
