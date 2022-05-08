@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(220);
+      }
+
+      function draw() {
+        circle(mouseX, mouseY, 10);
+        px = pow(mouseX - pmouseX, 2);
+        py = pow(mouseY - pmouseY, 2);
+        speed = sqrt(px + py); // 두 좌표간 이동 거리차 크기에 비례하여 도형 크기를 조정한다.
+        circle(mouseX, mouseY, speed);
+      }
+
+      function mousePressed() {
+        background(random(250), random(250), random(250));
+      }
+    </script>
+  </body>
+</html>
